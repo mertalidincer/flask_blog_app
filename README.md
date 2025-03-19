@@ -1,10 +1,18 @@
 # Flaskr - A Simple Blog Application
 
-Flaskr is a minimal blog application built with Flask. It allows users to register, log in, create posts, and edit or delete their own posts. The project is designed to be easily installable and customizable.
+Flaskr, Flask ile yapılmış minimal bir blog uygulamasıdır. Kullanıcılar, kayıt olabilir, giriş yapabilir, yazı oluşturabilir, yazılarını düzenleyebilir veya silebilir. Proje, kolayca kurulabilir ve özelleştirilebilir olacak şekilde tasarlanmıştır.
 
-## Features
-- User authentication (register, login, logout)
-- Create, edit, and delete posts
-- Display posts in reverse chronological order
-- Secure access to post modification (only the author can edit/delete)
-- SQLite database integration
+## Özellikler
+- Kullanıcı kimlik doğrulaması (kayıt olma, giriş yapma, çıkış yapma)
+- Yazı oluşturma, düzenleme ve silme
+- Yazıların ters kronolojik sırayla görüntülenmesi
+- Yazıların yalnızca yazarları tarafından düzenlenmesi/silinmesi
+- SQLite veritabanı entegrasyonu
+
+## Çalıştırma
+
+Aşağıdaki komutları kullanarak Flaskr'ı çalıştırabilirsiniz:
+
+```sh
+flask --app flaskr run --debug ("Database Initialized init-db")
+
