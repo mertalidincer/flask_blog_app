@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from . import db
 from . import auth
+from . import blog
 
 def create_app(test_config=None):
     #  create and configure the app
@@ -23,12 +24,14 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page thet says hello
-    @app.route('/hello')
-    def hello():
-        return 'hello, World'
+    # # a simple page thet says hello
+    # @app.route('/hello')
+    # def hello():
+    #     return 'hello, World'
     
     app.register_blueprint(auth.bp)
+    app.register_blueprint(blog.bp)
+    app.add_url_rule('/', endpoint='index')
 
     db.init_app(app)
     return app
